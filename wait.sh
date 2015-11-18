@@ -1,6 +1,6 @@
 #!/bin/bash
 while true; do
-    ping -c 10 google.com;
+    ping -c 3 -W 3 bing.com;
     if [ $? -eq 0 ]
     then
 	break;
