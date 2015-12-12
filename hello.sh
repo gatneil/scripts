@@ -1,1 +1,1 @@
-echo "hello$1" >> hello.txt
+echo "hello$1" >> /home/negat/hello.txt
