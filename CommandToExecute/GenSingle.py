@@ -7,10 +7,13 @@ def GenSingle(templateFile):
 
     for resource in template['resources']:
         if resource['type'] == 'Microsoft.Compute/virtualMachines/extensions':
-            if 'commandToExecute' in resource['properties']['settings']:
-                command = resource['properties']['settings']['commandToExecute']
-                del resource['properties']['settings']['commandToExecute']
-                resource['properties']['protectedSettings'] = {'commandToExecute': command}
+            if resource['properties']['type'] == 'CustomScriptForLinux':
+                if 'commandToExecute' in resource['properties']['settings']:
+                    command = resource['properties']['settings']['commandToExecute']
+                    del resource['properties']['settings']['commandToExecute']
+                    resource['properties']['protectedSettings'] = {'commandToExecute': command}
+
+                resource['properties']['typeHandlerVersion'] = '1.4'
         
 
     out = json.dumps(template, indent=2)
