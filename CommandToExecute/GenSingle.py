@@ -57,7 +57,7 @@ def GenSingle(templateFile):
     with open(templateFile, 'r') as tf:
         template = json.JSONDecoder(object_pairs_hook=collections.OrderedDict).decode(tf.read())
 
-    # initiate DFS through the template
+    # initiate deep iteration through the template
     GenSingleHelper(templateFile, template, False)
 
     out = json.dumps(template, indent=2)
