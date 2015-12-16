@@ -1,2 +1,4 @@
 bp = '/home/ubuntu/azure-quickstart-templates/'
 folders = ['create-hpc-cluster', 'create-hpc-cluster-custom-image', 'create-hpc-cluster-linux-cn', 'datastax-enterprise-marketplace', 'datastax-enterprise', 'mongodb-high-availability', 'nagios-on-ubuntu', 'node-mongodb-high-availability', 'postgresql-on-ubuntu', 'slurm', 'sqldb-django-on-ubuntu', 'torque-cluster', 'wordpress-single-vm-ubuntu']
+excludeFiles = ['create-hpc-cluster/linuxnode-rdma-disabled.json', 'create-hpc-cluster/linuxnode-rdma-enabled.json', 'datastax-enterprise-marketplace/dse-nodes-specific-resources-password.json', 'datastax-enterprise-marketplace/dse-nodes-specific-resources-sshPublicKey.json', 'datastax-enterprise/ephemeral-nodes-resources.json', 'node-mongodb-high-availability/frontend-resource.json']
+excludeFiles = [bp + f for f in excludeFiles]
