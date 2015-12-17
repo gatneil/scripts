@@ -3,7 +3,7 @@ import collections
 import os.path
 from Common import *
 
-replacements = {'storageAccountPrefix': 'GEN-UNIQUE', 'replicatorPassword': 'GEN-PASSWORD', 'newStorageAccountName': 'GEN-UNIQUE', 'storageNameForFrontEnd': 'GEN-UNIQUE', 'mySqlPassword': 'GEN-PASSWORD', 'administratorLoginPassword': 'GEN-PASSWORD', 'dnsName': 'GEN-UNIQUE', 'datastaxPassword': 'GEN-PASSWORD', 'opsCenterAdminPassword': 'GEN-PASSWORD', 'storageAccountNamePrefix': 'GEN-UNIQUE', 'adminPassword': 'GEN-PASSWORD', 'clusterName': 'GEN-UNIQUE', 'replicaSetKey': 'GEN-SSH-PUB-KEY', 'domainName': 'GEN-UNIQUE', 'dnsNameForPublicIP': 'GEN-UNIQUE', 'storageAccountName': 'GEN-UNIQUE', 'databaseName': 'GEN-UNIQUE', 'serverName': 'GEN-UNIQUE'}
+replacements = {'storageAccountPrefix': 'GEN-UNIQUE-8', 'replicatorPassword': 'GEN-PASSWORD', 'newStorageAccountName': 'GEN-UNIQUE-8', 'storageNameForFrontEnd': 'GEN-UNIQUE-8', 'mySqlPassword': 'GEN-PASSWORD', 'administratorLoginPassword': 'GEN-PASSWORD', 'dnsName': 'GEN-UNIQUE-8', 'datastaxPassword': 'GEN-PASSWORD', 'opsCenterAdminPassword': 'GEN-PASSWORD', 'storageAccountNamePrefix': 'GEN-UNIQUE-8', 'adminPassword': 'GEN-PASSWORD', 'clusterName': 'GEN-UNIQUE-8', 'replicaSetKey': 'GEN-SSH-PUB-KEY', 'domainName': 'GEN-UNIQUE-8', 'dnsNameForPublicIP': 'GEN-UNIQUE-8', 'storageAccountName': 'GEN-UNIQUE-8', 'databaseName': 'GEN-UNIQUE-8', 'serverName': 'GEN-UNIQUE-8'}
 
 params = {}
 for folder in folders:
