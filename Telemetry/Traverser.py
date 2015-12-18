@@ -65,7 +65,8 @@ class Traverser:
         node = self.getNested(keyList, template)
         if isinstance(node, collections.Mapping) or isinstance(node, list):
             # non-leaf node
-            self.keyFunc(filePath, template, keyList)
+            if self.keyFunc is not None:
+                self.keyFunc(filePath, template, keyList)
             
             if isinstance(node, collections.Mapping):
                 for key in node:
@@ -81,7 +82,8 @@ class Traverser:
 
         else:
             # leaf-node; no need to recurse
-            self.leafFunc(filePath, template, keyList, node)
+            if self.leafFunc is not None:
+                self.leafFunc(filePath, template, keyList, node)
         
 
     # gets the value of col[keyList[0]][keyList[1]]...[keyList[-1]]
