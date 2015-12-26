@@ -1,11 +1,12 @@
 apt-get -y update
 apt-get -y dist-upgrade
 
-apt-get -y install emacs24
-apt-get -y install tmux
-
 apt-get -y install wget
 wget https://dl.dropboxusercontent.com/u/65169988/.tmux.conf
+wget https://dl.dropboxusercontent.com/u/65169988/.emacs
+
+apt-get -y install tmux
+apt-get -y install emacs24
 
 apt-get -y install python3.4
 apt-get -y install python3-pip
