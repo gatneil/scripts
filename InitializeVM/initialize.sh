@@ -15,3 +15,5 @@ apt-get -y install python3-numpy
 apt-get -y install python3-scipy
 apt-get -y install python3-matplotlib
 apt-get -y install python3-pandas
+
+apt-get -y install git
