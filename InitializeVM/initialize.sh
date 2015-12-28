@@ -12,6 +12,7 @@ apt-get -y install python3.4
 apt-get -y install python3-pip
 apt-get -y install python3-bs4
 apt-get -y install python3-requests
+pip3 install grequests
 apt-get -y install python3-numpy
 apt-get -y install python3-scipy
 apt-get -y install python3-matplotlib
