@@ -30,4 +30,8 @@ res=$(($vm0+$vm1+$vm2+$vm3+$vm4-5))
 if [ $res -ne 0 ]
 then echo "TEST FAILED"
 fi
+
+# clean up the rg
+azure group delete -q -n $1rg
+
 exit $res
