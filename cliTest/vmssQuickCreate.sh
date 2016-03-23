@@ -1,4 +1,4 @@
-set -euxv #helpful for debugging
+set -euxv # helpful for debugging; remove for less verbose output
 
 mkdir -p output # create output dir if it doesn't exist
 rm -f output/* # remove old output
