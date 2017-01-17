@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo 'hi'
+touch /home/azure/test.txt
+
