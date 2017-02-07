@@ -5,7 +5,7 @@ set -evx
 # install dependencies
 apt-get update -y
 apt-get upgrade -y
-apt-get install python-pip -y
+apt-get install python-pip python-dev -y
 pip install numpy sumy
 python -c "import nltk; nltk.download('punkt')"
 
