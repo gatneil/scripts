@@ -1,6 +1,10 @@
 #!/bin/bash
 
+set -evx
+
 # install dependencies
+sudo apt update
+sudo apt dist-upgrade
 sudo apt install python-pip -y
 sudo pip install numpy sumy
 python -c "import nltk; nltk.download('punkt')"
