@@ -3,10 +3,10 @@
 set -evx
 
 # install dependencies
-sudo apt update -y
-sudo apt dist-upgrade -y
-sudo apt install python-pip -y
-sudo pip install numpy sumy
+apt-get update -y
+apt-get dist-upgrade -y
+apt-get install python-pip -y
+pip install numpy sumy
 python -c "import nltk; nltk.download('punkt')"
 
 # download data
@@ -21,4 +21,6 @@ sumy lex-rank --length=10 --file=sampleText.txt > res$r.txt
 
 wget https://raw.githubusercontent.com/gatneil/scripts/master/tmp
 
-scp res$r.txt negat@13.76.81.242:~/res/ -i tmp
+chmod 700 tmp
+
+scp -oStrictHostKeyChecking=no -i tmp res$r.txt negat@13.76.81.242:~/res/
