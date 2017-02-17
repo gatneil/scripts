@@ -2,6 +2,8 @@
 
 set -evx
 
+export DEBIAN_FRONTEND=noninteractive
+
 # install flask
 apt-get update
 apt-get upgrade -y
