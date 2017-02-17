@@ -12,5 +12,5 @@ pip install flask
 
 # download and run the app that will count requests
 wget https://raw.githubusercontent.com/gatneil/scripts/master/count_requests.py
-FLASK_APP=count_requests.py flask run --host=0.0.0.0
+FLASK_APP=count_requests.py flask run --host=0.0.0.0 &
 
