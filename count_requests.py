@@ -1,11 +1,24 @@
 from flask import Flask
 app = Flask(__name__)
 
+from os import listdir
+from os.path import isfile, join
+
 @app.route('/')
 def hello_world():
-    return 'Hello, World!!!!!!'
+    onlyfiles = [f for f in listdir('./') if isfile(join(mypath, f))]
+    fcount = 0
+    for fil in onlyfiles:
+        if (fil contains '_checkin.txt'):
+            fcount += 1
+            
+    return str(fcount)
 
-@app.route('/user/<username>')
-def show_user_profile(username):
+@app.route('/checkin/<vmname>')
+def checkin(vmname):
     # show the user profile for that user
-    return 'User %s' % username
+    fname = vmname + '_checkin.txt'
+    with open(fname, 'w') as f:
+        f.write("checking in!")
+        
+    return 'VM ' + vmname + ' checked in successfully.'
