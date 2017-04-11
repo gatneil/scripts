@@ -6,10 +6,10 @@ from os.path import isfile, join
 
 @app.route('/')
 def hello_world():
-    onlyfiles = [f for f in listdir('./') if isfile(join(mypath, f))]
+    onlyfiles = [f for f in listdir('./') if isfile(join('./', f))]
     fcount = 0
     for fil in onlyfiles:
-        if (fil contains '_checkin.txt'):
+        if ('_checkin.txt' in fil):
             fcount += 1
             
     return str(fcount)
